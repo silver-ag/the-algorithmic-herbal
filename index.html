@@ -1,0 +1,47 @@
+<head>
+ <title>The Algorithmic Herbal</title>
+ <script src=herbal.js></script>
+ <!-- itch.io doesn't seem to support seperate css files? -->
+ <style>
+  #pages {
+    display: flex;
+  }
+  #illustrationpage {
+    width: 50%;
+    height: 100%;
+  }
+  #illustration {
+    width: 50%;
+    height: 100%;
+  }
+  #descriptionpage {
+    width: 50%;
+    height: 100%;
+  }
+  #name {
+    text-transform: capitalize;
+  }
+  body {
+    background-color: #f5f5a0
+  }
+ </style>
+</head>
+<body>
+ <label for=page>page</label>
+ <input type=number id=page></input>
+ <button onclick="generate()">go</button>
+ <button onclick="randompage();generate()">random</button>
+ <div id=pages>
+  <div id=illustrationpage>
+   <svg id=frontview width=500 height=500></svg>
+  </div>
+  <div id=descriptionpage>
+   <h2 id=name></h2>
+   <div id=description></div>
+  </div>
+ </div>
+ <script>
+  document.getElementById("page").value = 0;
+  generate();
+ </script>
+</body>
